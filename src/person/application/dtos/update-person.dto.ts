@@ -6,6 +6,23 @@ export class UpdatePersonDto {
   @IsString()
   @IsOptional()
   name: string;
+  @ApiPropertyOptional({ description: 'Surname of the person' })
+  @IsString()
+  @IsOptional()
+  surname: string;
 
-  companyId: string;
+  @ApiPropertyOptional({ description: 'Date of birth of the person' })
+  @IsString()
+  @IsOptional()
+  dob: string;
+
+  @ApiPropertyOptional({ description: 'Gender of the person' })
+  @IsString()
+  @IsOptional()
+  gender: string;
+
+  @ApiPropertyOptional({ description: 'Citizen of the person' })
+  @IsString()
+  @IsOptional()
+  citizen: string
 }
