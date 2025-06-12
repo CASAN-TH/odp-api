@@ -25,9 +25,9 @@ export class CreatePersonHandler
     const today = new Date();
     const person = new PersonEntity();
     Object.assign(person, createPersonDto);
-    person.companyId = createdBy.companySelected;
-    person.createdBy = createdBy.id;
-    person.createdAt = today;
+    // person.companyId = createdBy.companySelected;
+    // person.createdBy = createdBy.id;
+    // person.createdAt = today;
     const newPerson = await this.personRepository.save(person);
     return new ResponseDto<PersonEntity>(newPerson);
   }

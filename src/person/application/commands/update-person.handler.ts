@@ -24,9 +24,9 @@ export class UpdatePersonHandler
     }
 
     Object.assign(person, updatePersonDto);
-    person.updatedAt = new Date();
-    person.updatedBy = updatedBy.id;
-    person.companyId = updatedBy.companySelected;
+    // person.updatedAt = new Date();
+    // person.updatedBy = updatedBy.id;
+    // person.companyId = updatedBy.companySelected;
     // อัปเดตข้อมูลในฐานข้อมูล
     const updPerson = await this.personRepository.update(person);
     return new ResponseDto<PersonEntity>(updPerson);

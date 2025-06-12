@@ -8,27 +8,52 @@ export class PersonEntity {
   })
   public id: string;
 
+  // // @Expose()
+  // // @Prop({ type: String, unique: true, required: true })
+  // // name: string;
+
+  // @Expose()
+  // @Prop({ type: String, required: true })
+  // companyId: string;
+  
+  // @Expose()
+  // @Prop({ type: Date, default: Date.now })
+  // createdAt: Date;
+
+  // @Expose()
+  // @Prop({ type: Date })
+  // updatedAt: Date;
+
+  // @Expose()
+  // @Prop({ type: Object })
+  // createdBy: any;
+
+  // @Expose()
+  // @Prop({ type: Object })
+  // updatedBy: any;
+
   @Expose()
   @Prop({ type: String, unique: true, required: true })
+  n_id: string;
+
+  @Expose()
+  @Prop({ type: String, required: true })
   name: string;
 
   @Expose()
   @Prop({ type: String, required: true })
-  companyId: string;
+  surname: string;
   
   @Expose()
-  @Prop({ type: Date, default: Date.now })
-  createdAt: Date;
+  @Prop({ type: Date, required: true })
+  dob: Date;
 
   @Expose()
-  @Prop({ type: Date })
-  updatedAt: Date;
+  @Prop({ type: String, required: true })
+  gender: string;
 
   @Expose()
-  @Prop({ type: Object })
-  createdBy: any;
-
-  @Expose()
-  @Prop({ type: Object })
-  updatedBy: any;
+  @Prop({ type: String, required: true })
+  citizen: string;
+  
 }
