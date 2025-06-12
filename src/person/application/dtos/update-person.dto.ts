@@ -14,7 +14,7 @@ export class UpdatePersonDto {
   @ApiPropertyOptional({ description: 'Date of birth of the person' })
   @IsString()
   @IsOptional()
-  dob: string;
+  dob: Date;
 
   @ApiPropertyOptional({ description: 'Gender of the person' })
   @IsString()
@@ -25,4 +25,12 @@ export class UpdatePersonDto {
   @IsString()
   @IsOptional()
   citizen: string
+  // @ApiPropertyOptional({ description: 'Email of the person' })
+  // @IsEmail()
+  // @IsOptional()
+  // email: string;
+  // @ApiPropertyOptional({ description: 'Phone Numbers of the person' })
+  // @IsArray()
+  // @IsOptional()
+  // phoneNumbers: string[];
 }

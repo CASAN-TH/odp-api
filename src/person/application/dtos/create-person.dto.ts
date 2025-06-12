@@ -20,7 +20,10 @@ export class CreatePersonDto {
   @ApiProperty({ description: 'Citizenship' })
   @IsString()
   citizen: string;
-
-
-  companyId: string;
+  // @ApiProperty({ description: 'Email' })
+  // @IsEmail()
+  // email: string; 
+  // @ApiProperty({ description: 'Phone Numbers' })
+  // @IsArray()
+  // phoneNumbers: string[];
 }
