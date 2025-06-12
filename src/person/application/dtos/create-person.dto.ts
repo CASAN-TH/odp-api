@@ -5,9 +5,12 @@ export class CreatePersonDto {
   @ApiProperty({ description: 'National_ID' })
   @IsString()
   n_id: string;
-  @ApiProperty({ description: 'Fullname' })
+  @ApiProperty({ description: 'First Name' })
   @IsString()
   name: string;
+  @ApiProperty({ description: 'Last Name' })
+  @IsString()
+  surname: string;
   @ApiProperty({ description: 'date-of-birth' })
   @IsString()
   dob: Date;
