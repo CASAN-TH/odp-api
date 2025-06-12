@@ -2,12 +2,25 @@ import { ApiProperty } from '@nestjs/swagger';
 import { IsString, IsEmail, IsArray } from 'class-validator';
 
 export class CreatePersonDto {
-  @ApiProperty({ description: 'Name of the person' })
+  @ApiProperty({ description: 'Personal ID' })
+  @IsString()
+  id: string;
+  @ApiProperty({ description: 'National_ID' })
+  @IsString()
+  n_id: string;
+  @ApiProperty({ description: 'Fullname' })
   @IsString()
   name: string;
-  @ApiProperty({ description: 'Surname of the person' })
+  @ApiProperty({ description: 'date-of-birth' })
   @IsString()
-  surname: string;
+  dob: Date;
+  @ApiProperty({ description: 'Gender' })
+  @IsString()
+  gender: string;
+  @ApiProperty({ description: 'Citizenship' })
+  @IsString()
+  citizen: string;
+
 
   companyId: string;
 }
