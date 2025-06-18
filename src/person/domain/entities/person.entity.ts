@@ -31,6 +31,7 @@ export class PersonEntity {
   @Expose()
   @Prop({ type: String, required: true })
   citizen: string;
+<<<<<<< HEAD
 
   @Expose()
   @Prop({ type: String })
@@ -48,3 +49,13 @@ export class PersonEntity {
   @Prop({ type: String })
   address?: string;
 }
+=======
+  // @Expose()
+  // @Prop({ type: String, required: true })
+  // email: string;
+  // @Expose()
+  // @Prop({ type: [String], required: true })
+  // phoneNumbers: string[];
+  
+}
+>>>>>>> f0b1e3a0e89eda1a9b78c7a048a0b979863eb652

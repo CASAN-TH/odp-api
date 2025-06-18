@@ -17,6 +17,8 @@ export class UpdatePersonHandler
   async execute(command: UpdatePersonCommand): Promise<ResponseDto<PersonEntity>> {
     const { id, updatePersonDto, updatedBy  } = command;
 
+    console.table(updatePersonDto);
+
     // หา Person จาก ID
     const person = await this.personRepository.findById(id);
     if (!person) {

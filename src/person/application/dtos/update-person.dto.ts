@@ -10,7 +10,11 @@ export class UpdatePersonDto {
   @ApiPropertyOptional({ description: 'First Name' })
   @IsString()
   @IsOptional()
+<<<<<<< HEAD
   name?: string;
+=======
+  dob: Date;
+>>>>>>> f0b1e3a0e89eda1a9b78c7a048a0b979863eb652
 
   @ApiPropertyOptional({ description: 'Last Name' })
   @IsString()
@@ -20,6 +24,7 @@ export class UpdatePersonDto {
   @ApiPropertyOptional({ description: 'date-of-birth' })
   @IsString()
   @IsOptional()
+<<<<<<< HEAD
   dob?: string;
 
   @ApiPropertyOptional({ description: 'Gender' })
@@ -57,3 +62,15 @@ export class UpdatePersonDto {
   @IsOptional()
   companyId?: string;
 }
+=======
+  citizen: string
+  // @ApiPropertyOptional({ description: 'Email of the person' })
+  // @IsEmail()
+  // @IsOptional()
+  // email: string;
+  // @ApiPropertyOptional({ description: 'Phone Numbers of the person' })
+  // @IsArray()
+  // @IsOptional()
+  // phoneNumbers: string[];
+}
+>>>>>>> f0b1e3a0e89eda1a9b78c7a048a0b979863eb652

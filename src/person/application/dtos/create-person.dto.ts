@@ -25,6 +25,7 @@ export class CreatePersonDto {
   @ApiProperty({ description: 'Citizenship' })
   @IsString()
   citizen: string;
+<<<<<<< HEAD
 
   @ApiProperty({ description: 'Nationality' })
   @IsString()
@@ -45,4 +46,12 @@ export class CreatePersonDto {
   @ApiProperty({ description: 'Company ID', required: false })
   @IsString()
   companyId?: string;
+=======
+  // @ApiProperty({ description: 'Email' })
+  // @IsEmail()
+  // email: string; 
+  // @ApiProperty({ description: 'Phone Numbers' })
+  // @IsArray()
+  // phoneNumbers: string[];
+>>>>>>> f0b1e3a0e89eda1a9b78c7a048a0b979863eb652
 }
