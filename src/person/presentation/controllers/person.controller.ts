@@ -36,43 +36,9 @@ export class PersonController {
   @Post()
   @SetMetadata('roles', ['owner', 'admin']) // กำหนดว่าเฉพาะ admin ที่สามารถเรียกใช้งานได้
   @ApiOperation({ summary: 'Create a new person' })
- @ApiQuery({
-    name: 'Citizenship',
-    required: true,
-    description: 'Citizenship of the person',
-    type: String,
-})
-@ApiQuery({
-    name: 'Gender',
-    required: true,
-    description: 'Gender of the person',
-    type: String,
-})
- @ApiQuery({
-    name: 'BirthDate',
-    required: true,
-    description: 'Birth date of the person',
-    type: Date,
-})
-@ApiQuery({
-    name: 'LastName',
-    required: true,
-    description: 'Last name of the person',
-    type: String,
-})
- @ApiQuery({
-    name: 'FirstName',
-    required: true,
-    description: 'First name of the person',
-    type: String,
-})
-@ApiQuery({
-    name: 'NationalID',
-    required: true,
-    description: 'National ID of the person',
-    type: String,
-})
+    
   @ApiResponse({ status: 201, description: 'Person successfully created' })
+ 
   async createPerson(
     @Body() createPersonDto: CreatePersonDto,
     @Req() req,

@@ -1,28 +1,59 @@
 import { ApiPropertyOptional } from '@nestjs/swagger';
-import { IsString, IsEmail, IsArray, IsOptional } from 'class-validator';
+import { IsString, IsOptional } from 'class-validator';
 
 export class UpdatePersonDto {
-  @ApiPropertyOptional({ description: 'Name of the person' })
+  @ApiPropertyOptional({ description: 'National_ID' })
   @IsString()
   @IsOptional()
-  name: string;
-  @ApiPropertyOptional({ description: 'Surname of the person' })
-  @IsString()
-  @IsOptional()
-  surname: string;
+  n_id?: string;
 
-  @ApiPropertyOptional({ description: 'Date of birth of the person' })
+  @ApiPropertyOptional({ description: 'First Name' })
   @IsString()
   @IsOptional()
-  dob: string;
+  name?: string;
 
-  @ApiPropertyOptional({ description: 'Gender of the person' })
+  @ApiPropertyOptional({ description: 'Last Name' })
   @IsString()
   @IsOptional()
-  gender: string;
+  surname?: string;
 
-  @ApiPropertyOptional({ description: 'Citizen of the person' })
+  @ApiPropertyOptional({ description: 'date-of-birth' })
   @IsString()
   @IsOptional()
-  citizen: string
+  dob?: string;
+
+  @ApiPropertyOptional({ description: 'Gender' })
+  @IsString()
+  @IsOptional()
+  gender?: string;
+
+  @ApiPropertyOptional({ description: 'Citizenship' })
+  @IsString()
+  @IsOptional()
+  citizen?: string;
+
+  @ApiPropertyOptional({ description: 'Nationality' })
+  @IsString()
+  @IsOptional()
+  nationality?: string;
+
+  @ApiPropertyOptional({ description: 'Religion' })
+  @IsString()
+  @IsOptional()
+  religion?: string;
+
+  @ApiPropertyOptional({ description: 'Phone Number' })
+  @IsString()
+  @IsOptional()
+  phone?: string;
+
+  @ApiPropertyOptional({ description: 'Address' })
+  @IsString()
+  @IsOptional()
+  address?: string;
+
+  @ApiPropertyOptional({ description: 'Company ID' })
+  @IsString()
+  @IsOptional()
+  companyId?: string;
 }

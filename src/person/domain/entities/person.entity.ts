@@ -8,30 +8,6 @@ export class PersonEntity {
   })
   public id: string;
 
-  // // @Expose()
-  // // @Prop({ type: String, unique: true, required: true })
-  // // name: string;
-
-  // @Expose()
-  // @Prop({ type: String, required: true })
-  // companyId: string;
-  
-  // @Expose()
-  // @Prop({ type: Date, default: Date.now })
-  // createdAt: Date;
-
-  // @Expose()
-  // @Prop({ type: Date })
-  // updatedAt: Date;
-
-  // @Expose()
-  // @Prop({ type: Object })
-  // createdBy: any;
-
-  // @Expose()
-  // @Prop({ type: Object })
-  // updatedBy: any;
-
   @Expose()
   @Prop({ type: String, unique: true, required: true })
   n_id: string;
@@ -43,7 +19,7 @@ export class PersonEntity {
   @Expose()
   @Prop({ type: String, required: true })
   surname: string;
-  
+
   @Expose()
   @Prop({ type: Date, required: true })
   dob: Date;
@@ -55,5 +31,20 @@ export class PersonEntity {
   @Expose()
   @Prop({ type: String, required: true })
   citizen: string;
-  
+
+  @Expose()
+  @Prop({ type: String })
+  nationality?: string;
+
+  @Expose()
+  @Prop({ type: String })
+  religion?: string;
+
+  @Expose()
+  @Prop({ type: String })
+  phone?: string;
+
+  @Expose()
+  @Prop({ type: String })
+  address?: string;
 }

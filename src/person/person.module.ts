@@ -19,8 +19,6 @@ import { PersonSchema } from './infrastructure/persistence/person.schema';
   ],
   controllers: [PersonController],
   providers: [
-    Reflector,
-    RolesAndScopesGuard,
     CreatePersonHandler,
     UpdatePersonHandler,
     DeletePersonHandler,
@@ -30,6 +28,8 @@ import { PersonSchema } from './infrastructure/persistence/person.schema';
       provide: 'PersonRepository',
       useClass: PersonRepository,
     },
+    Reflector,
+    RolesAndScopesGuard,
   ],
 })
 export class PersonModule {}
